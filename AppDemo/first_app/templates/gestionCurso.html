@@ -38,6 +38,7 @@
 				<table class='table table-striped'>
 					<thead>
 						<tr>
+							<th>#</th>
 							<th>Codigo</th>
 							<th>Nombre</th>
 							<th>Creditos</th>
@@ -47,11 +48,12 @@
 					<tbody>
 						{% for c in cursos %}
 						<tr>
+							<td>{{forloop.counter}}</td>
 							<td>{{c.codigo}}</td>
 							<td>{{c.nombre}}</td>
 							<td>{{c.creditos}}</td>
 							<td><a href="edicionCurso/{{c.codigo}}" class="btn btn-info">Editar</a></td>
-							<td><a href="eliminarCurso/{{c.codigo}}" class="btn btn-danger">Eliminar</a></td>
+							<td><a href="eliminarCurso/{{c.codigo}}" class="btn btn-danger btnEliminacion">Eliminar</a></td>
 						</tr>
 						{% endfor %}
 					</tbody>
